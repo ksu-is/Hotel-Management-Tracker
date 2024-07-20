@@ -15,11 +15,11 @@ password = input("Enter password: ")
 for entry in range(3):
     
     if user_name == guest_name and password == guest_room:
-        access= input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Billing '\n' Enter ""2"" for Check-in '\n' Enter ""3"" for Room Service: ")
+        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Billing '\n' Enter ""2"" for Check-in '\n' Enter ""3"" for Room Service: ")
         attempts += 1
         break
     else:
-        access = input("Access Denied, try again. Password: ")
+        home = input("Access Denied, try again. Password: ")
         attempts += 1
     if attempts == 3:
         print("You have exceeded the amount of attempts allowed. Please try again later. Goodbye.")
