@@ -21,7 +21,7 @@ password = input("Enter password: ")
 for entry in range(3):
     
     if user_name == guest_name and password == guest_room:
-        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Billing '\n' Enter ""2"" for Check-in '\n' Enter ""3"" for Room Service: ")
+        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Check-in/out'\n' Enter ""2"" for Billing '\n' Enter ""3"" for Room Service: ")
         attempts += 1
         break
     else:
@@ -39,21 +39,25 @@ if access == "1":
          stay = input("Please confirm the room number confirmed with your stay")
             if stay in rooms
                stay = input("That room number is not valid. Please try again.")
+
       if stay == "checking out".capitalize or "out".capitalize
-          stay = input("Please confirm your room number confirmed")
+          guest_room = input("Please confirm your room number confirmed")
             if stay in rooms
-               stay = input("That room number is not valid. Please try again.")
-    if guest_room >= 100 
-        print("Thank you, your bill for a queen single is $125 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
-    if guest_room >= 200 
-        print("Thank you, your bill for a queen double is $250 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
-    if guest_room >= 300
-        print("Thank you, your bill for a king is $315 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
-     if guest_room >= 400
-        print("Thank you, your bill for a suite is $405 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
+               stay = input("Thank you for confirming.")
+          if guest_room >= 100 
+              print("Thank you, your bill for a queen single is $125 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
+          if guest_room >= 200 
+              print("Thank you, your bill for a queen double is $250 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
+          if guest_room >= 300
+              print("Thank you, your bill for a king is $315 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
+         if guest_room >= 400
+              print("Thank you, your bill for a suite is $405 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
 
 
 if access == "2":
+   billing = input("Thank you, you have accessed our billing menu. Would you like to view your bill?")
+   if billing == "yes".capiatlize
+      billing = input("Please enter your room number: ")
 if access == "3":
     menu = input("Which menu would you like to order from? For breakfast: enter 'B', for lunch: enter 'L', for dinner:  enter 'D',for appetizers: enter 'A': ")
 if menu.capitalize == "B":
