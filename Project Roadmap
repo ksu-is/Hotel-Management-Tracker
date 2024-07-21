@@ -5,6 +5,11 @@ Step 2: Create Roadmap
 Step 3: Develop flowchart for code in lucid chart to plan out processes and decisions
   Flow chart will include a home menu button, using numbers to go to different processes as well as include a username and password for hotel staff to enter in order to access the system.
 Step 4: Write code and correct errors as I go
+  Note:
+      Add "h" for home & "q" for quit to navigate through system & ease through UI/UX
+      Finish up menu options and make sure user options make sense and is easy to use
+      Fix user log-in, been having trouble shift the login from staff use to guest use
+      A lot more to do!
 Step 5: Correct errors and clean up code
 Step 6: Create powerpoint and plan presentation
 Step 6: Go through code and powerpoint, and fix any errors and add any additional details if needed
