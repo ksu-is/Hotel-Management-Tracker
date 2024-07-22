@@ -6,7 +6,19 @@ def hotel_rms(rooms):
    rooms_avail = {'single': [101,102,103,104,105], 'double': [201,202,203,204,205], 'king': [301,302,303,304,305], 'suite':[401,402,403,404,405]
    rooms.room_price = {1:200,2:275,3:350,4:430}              
 
-#occupied rooms/room count
+#defining check-in/out
+def check_in(rooms,guest):
+   pass
+def check_out(guest,rooms):
+   pass
+def booking(rooms, guest):
+   room_type = input("Room Types: Single, Double, King, Suite")
+   date_beg = input("Enter MM/DD/YY when you would like to stay")
+   date_end = input("Enter MM/DD/YY when you would like to end your stay")
+   name = input('Please enter your first name and last initial: ')
+   print("Thank you", name, "for booking with Opulent Oasis! You have a confirmed your stay with us on",date_beg, "to",date_end,". We look forward to your stay!")
+  
+
 
                   
 #Hotel menus
