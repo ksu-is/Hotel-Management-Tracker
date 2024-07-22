@@ -1,5 +1,14 @@
 #This is a coding system for hotel management from the guests' UI/UX 
 
+#defining room numbers/price
+def hotel_rms(rooms):
+   rooms.room_count ={}
+   rooms_avail = {'single': [101,102,103,104,105], 'double': [201,202,203,204,205], 'king': [301,302,303,304,305], 'suite':[401,402,403,404,405]
+   rooms.room_price = {1:200,2:275,3:350,4:430}              
+
+#occupied rooms/room count
+
+                  
 #Hotel menus
 brunch_menu = ["Pancakes", "Shrimp & Grits", "All-Star Breakfast", "Omelette"]
 lunch_menu = ["Cesar Salad", "Club Snadwich", "1/3 lb. Beef Burger w/ Fries", "Fish Tacos"]
