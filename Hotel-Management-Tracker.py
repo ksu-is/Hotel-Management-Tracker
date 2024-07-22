@@ -30,7 +30,7 @@ password = input("Enter password: ")
 for entry in range(3):
     
     if user_name == guest_name and password == guest_room:
-        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Check-in/out'\n' Enter ""2"" for Billing '\n' Enter ""3"" for Room Service '\n' Enter ""4"" for Booking: ")
+        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Check-in/out'\n' Enter ""2"" for Billing '\n' Enter ""3"" for Room Service '\n' Enter ""4"" for Booking \n' Enter ""5"" to Exit: ")
         attempts += 1
         break
     else:
@@ -45,14 +45,14 @@ for entry in range(3):
 if access == "1":
    stay = input("Are you checking in or out")
       if stay == "checking in".capitalize or "in".capitalize
-         stay = input("Please confirm the room number confirmed with your stay")
+         stay = input("Please confirm the room number confirmed with your stay: ")
             if stay in rooms
                stay = input("That room number is not valid. Please try again.")
 
       if stay == "checking out".capitalize or "out".capitalize
-          guest_room = input("Please confirm your room number confirmed")
+          guest_room = input("Please confirm your room number: ")
             if stay in rooms
-               stay = input("Thank you for confirming.")
+               stay = input("Thank you for confirming. You have successfully checked out. Please visit us again!")
           if guest_room >= 100 
               print("Thank you, your bill for a queen single is $125 and has been charged to your card. Thank you for staying at Opulet Oasis! Please come again!")
           if guest_room >= 200 
@@ -69,46 +69,74 @@ if access == "2":
       billing = input("Please enter your room number: ")
 if access == "3":
     menu = input("Which menu would you like to order from? For breakfast: enter 'B', for lunch: enter 'L', for dinner:  enter 'D',for appetizers: enter 'A': ")
-if menu.capitalize == "B":
-                print(brunch_menu)
-                order_brunch = input("What would the guest like to order?")
-                if order_brunch is in brunch_menu:
-                    print("Thank you",guest_name, "! Your order:" ,order_brunch, "has been placed with an estimated arrival time of 15 minutes.")
+   if menu.capitalize == "B":
+                   print(brunch_menu)
+                   order_brunch = input("What would the guest like to order?")
+                   if order_brunch is in brunch_menu:
+                      print("Thank you",guest_name, "! Your order:" ,order_brunch, "has been placed with an estimated arrival time of 15 minutes.")
+                      
+   if menu.capitalize == "L":
+                   print(lunch_menu)
+                   room = input("Please enter the room number you are currently staying in: ")
+                   order_lunch = input("What would the guest like to order?")
+                   if order_lunch is in lunch_menu:
+                       print("Thank you",guest_name, "! Your order:" ,order_lunch, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order")
+   
+   if menu.capitalize == "D":
+                   print(dinner_menu)
+                   order_dinner = input("What would the guest like to order?")
+                   if order_dinner is in dinner_menu:
+                       print("Thank you",guest_name, "! Your order:" ,order_dinner, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order.") 
+           
+   if menu.capitalize == "D":
+                   print(dinner_menu)
+                   order_dinner = input("What would the guest like to order?")
+                   if order_dinner is in dinner_menu:
+                       print("Thank you",guest_name, "! Your order:" ,order_dinner, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order.") 
+           
+   if menu.capitalize == "A":
+                   print(dinner_menu)
+                   order_app = input("What would the guest like to order?")
+                   if order_app is in appetizer_menu_menu:
+                       print("Thank you",guest_name, "! Your order:" ,order_app, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order") 
 
-
-if menu.capitalize == "L":
-                print(lunch_menu)
-                room = input("Please enter the room number you are currently staying in: ")
-                order_lunch = input("What would the guest like to order?")
-                if order_lunch is in lunch_menu:
-                    print("Thank you",guest_name, "! Your order:" ,order_lunch, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order")
-
-if menu.capitalize == "D":
-                print(dinner_menu)
-                order_dinner = input("What would the guest like to order?")
-                if order_dinner is in dinner_menu:
-                    print("Thank you",guest_name, "! Your order:" ,order_dinner, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order.") 
-        
-if menu.capitalize == "D":
-                print(dinner_menu)
-                order_dinner = input("What would the guest like to order?")
-                if order_dinner is in dinner_menu:
-                    print("Thank you",guest_name, "! Your order:" ,order_dinner, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order.") 
-        
-if menu.capitalize == "A":
-                print(dinner_menu)
-                order_app = input("What would the guest like to order?")
-                if order_app is in appetizer_menu_menu:
-                    print("Thank you",guest_name, "! Your order:" ,order_app, "has been placed with an estimated arrival time of 15 minutes. You have been billed for your order") 
-
-if access == "4" 
+if access == "4":
    date = input("Thank you for choosing to stay with Opulent Oasis. When would you check-in? (MM/DD/YY"))
    date_2 = input("Thank you for choosing to stay with Opulent Oasis. When would you check-out? (MM/DD/YY"))
    booking = input("Which type of room would you like to book? Enter Single, Double, King, or Suite")
-      if booking == "Single"
+   if booking == "Single"
          print("Thank you! You have booked with Opulent Oasis on:" , date, "to", date_2, ". We look forward to seeing you soon!")
          date = date.append()
          date_2 = date.append()
+   if booking == "Double"
+         print("Thank you! You have booked with Opulent Oasis on:" , date, "to", date_2, ". We look forward to seeing you soon!")
+         date = date.append()
+         date_2 = date.append()
+   if booking == "Single"
+         print("Thank you! You have booked with Opulent Oasis on:" , date, "to", date_2, ". We look forward to seeing you soon!")
+         date = date.append()
+         date_2 = date.append()
+   if booking == "King"
+            print("Thank you! You have booked with Opulent Oasis on:" , date, "to", date_2, ". We look forward to seeing you soon!")
+            date = date.append()
+            date_2 = date.append()
+   if booking == "Suite"
+            print("Thank you! You have booked with Opulent Oasis on:" , date, "to", date_2, ". We look forward to seeing you soon!")
+            date = date.append()
+            date_2 = date.append()
+if access == "5":
+   quit = input("Are you sure you want to quit? Enter 'yes' or 'no'")
+      if quit == "no". capitalize():
+         return access
+      if quit == "yes". capitalize():
+         print("You have ended the program. Thank you.")
+      else: 
+         quit = input("Entry invalid. Please enter 'yes' or 'no'")
+
+
+
+   
+
 
          
         
