@@ -30,12 +30,6 @@ appetizer_menu = ["Spinach & Artichoke Dip", "Pretzel Bites", "Garden Salad", "H
 #counter to keep track of rooms/lists
 menu = []
 rooms = []
-attempts = 0
-rooms_taken = 0
-single_avail = 100
-double_avail = 75
-kings_avail = 50
-suites_avail  = 25
 date = []
 
 
