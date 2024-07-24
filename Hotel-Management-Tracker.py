@@ -34,26 +34,10 @@ date = []
 
 
 #Opulent Oasis offers four types of rooms: Single Queen, Double Queen, King, and Suites
-#Use "guest_name" for username and "guest_room" for password
 guest_name = input("Please enter your first name and last intial: ")
 guest_room = input("Please enter your room number: ")
 
-#login
-user_name = input("Enter username: ")
-password = input("Enter password: ")
-   
-for entry in range(3):
-    
-    if user_name == guest_name and password == guest_room:
-        access = input("Access Granted! Main Menu ''\n'' Enter "" 1"" for Check-in/out'\n' Enter ""2"" for Billing '\n' Enter ""3"" for Room Service '\n' Enter ""4"" for Booking \n' Enter ""5"" to Exit: ")
-        attempts += 1
-        break
-    else:
-        home = input("Access Denied, try again. Password: ")
-        attempts += 1
-    if attempts == 3:
-        print("You have exceeded the amount of attempts allowed. Please try again later. Goodbye.")
-        break
+
 #charge customers accordingly based on room number
 #
 #if the room # is >= 100 count towards single, if the room # is >= 200 count towards double queen,if the room # is >= 300 count towards king,if the room # is >= 400 count towards suite
