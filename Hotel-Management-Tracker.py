@@ -12,6 +12,8 @@ rooms_3 = [301,302,303,304,305]
 rooms_4 = [401,402,403,404,405]
 
 guest = ""
+rm_bill = 0
+food_bill = 0
 fin_bill = 0
 
 
@@ -24,26 +26,25 @@ def booking(guest):
     print("4. Suite: $315/night")
 
 
+
+
     guest_room = int(input("Please choose the number that correlates with room type:"))
     nights = int(input("How many nights would you like to stay?: "))
 
     if(guest_room == 1):
       rm_bill = 150*nights
-      fin_bill += rm_bill
       check_name.append(guest_name)
       print("Thank you", check_name, "! You have booked a single. You will be billed $", rm_bill ,"at the end of your stay. We look forward to hosting you.")
       print("Your room number is: ",random.choice(rooms_1), ".")
     elif(guest_room == 2):
      check_name.append(guest_name)
      rm_bill = 200*nights
-     fin_bill += rm_bill
      print("Thank you", check_name, "! You have booked a double. You will be billed $",rm_bill,"at the end of your stay. We look forward to hosting you.")
      print("Your room number is: ",random.choice(rooms_2), ".")
 
     elif(guest_room == 3):
       check_name.append(guest_name)
       rm_bill = 275*nights
-      fin_bill += rm_bill
       print("Thank you", check_name, "! You have booked a king. You will be billed $",rm_bill,"at the end of your stay. We look forward to hosting you.")
       print("Your room number is: ",random.choice(rooms_3), ".")
 
@@ -51,7 +52,6 @@ def booking(guest):
     elif(guest_room == 4):
       check_name.append(guest_name)
       rm_bill = 315*nights
-      fin_bill += rm_bill
       print("Thank you", check_name, "! You have booked a suite. You will be billed $",rm_bill, "at the end of your stay. We look forward to hosting you.")
       print("Your room number is: ",random.choice(rooms_4), ".")
 
@@ -83,28 +83,23 @@ def room_service():
 
   if (order == "A"):
       food_bill = 10
-      fin_bill += food_bill
       print("Thank you",guest_name, "! We have recieved your order. It will be delivered in about 15-20 minutes. You have been billed $",food_bill, ". We hope you enjoy!")
 
 
   elif(order == "B"):
       food_bill = 15
-      ffin_bill += food_bill
       print("Thank you",guest_name, "! We have recieved your order. It will be delivered  in about 15-20 minutes. You have been billed $",food_bill, ". We hope you enjoy!")
 
   elif(order == "L"):
       food_bill = 20
-      fin_bill += food_bill
       print("Thank you",guest_name, "! We have recieved your order. It will be delivered in about 15-20 minutes. You have been billed $",food_bill, ". We hope you enjoy!")
 
   elif(order == "D"):
       food_bill = 25
-      fin_bill += food_bill
       print("Thank you",guest_name, "! We have recieved your order. It will be delivered in about 15-20 minutes. You have been billed $",food_bill, ". We hope you enjoy!")
 
   elif(order == "Dessert"):
       food_bill = 10
-      fin_bill += food_bill
       print("Thank you",guest_name, "! We have recieved your order. It will be delivered in about 15-20 minutes. You have been billed $",food_bill, ". We hope you enjoy!")
 
   elif(order == "Cancel"):
@@ -119,7 +114,7 @@ def room_service():
 def billing():
   print ("Room Total: $",rm_bill)
   print ("Food Service Total: $",food_bill)
-  fin_bill= rm_bill + food_bill
+  fin_bill = rm_bill + food_bill
   print("Your total is: $",fin_bill, ". You will be charged at the end of your stay.")
 
 
@@ -154,13 +149,14 @@ while True:
 
   elif access == "5":
     quit = input("Are you sure you want to quit? Enter yes or no: ")
-  elif quit == "no":
+    if quit == "no":
       print(access)
-  elif quit == "yes":
+
+    if quit == "yes":
+      print("You have ended the program.")
       break
-  else:
-    access = input("Sorry, invalid input. Please enter an option from the main menu")
-  
+ 
+
 
 
 
